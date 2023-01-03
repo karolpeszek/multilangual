@@ -1,0 +1,10 @@
+{
+    "title": "Vielsprachiger App",
+    "pageTitle": "Hallo!",
+    "header": "Willkommen bei dieser einfachen Web-App. Hier können Sie die Sprache ändern:",
+    "availableLanguages": "Verfügbare Sprachen:",
+    "poemHeader": "Ein Lied",
+    "poem": "Der du von dem Himmel bist<br><br>Der du von dem Himmel bist,<br>Alles Leid und Schmerzen stillest,<br>Den, der doppelt elend ist,<br>Doppelt mit Erquickung füllest;<br>Ach, ich bin des Treibens müde!<br>Was soll all der Schmerz und Lust?<br>Süßer Friede,<br>Komm, ach komm in meine Brust!",
+    "flagHeader": "Flagge",
+    "flag": "🇩🇪"
+}

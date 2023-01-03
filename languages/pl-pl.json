@@ -1,0 +1,10 @@
+{
+    "title": "Aplikacja wielojęzyczna",
+    "pageTitle": "Witaj użytkowniku!",
+    "header": "Witam Cię w moich skromnych progach, poniżej możesz wybrać język tej strony.",
+    "availableLanguages": "Języki do wybory:",
+    "poemHeader": "Wierszyk",
+    "poem": "Adam Asnyk - Między nami nic nie było<br><br>Między nami nic nie było!<br>Żadnych zwierzeń, wyznań żadnych,<br>Nic nas z sobą nie łączyło<br>Prócz wiosennych marzeń zdradnych;<br><br>Prócz tych woni, barw i blasków<br>Unoszących się w przestrzeni,<br>Prócz szumiących śpiewem lasków<br>I tej świeżej łąk zieleni;<br><br>Prócz tych kaskad i potoków<br>Zraszających każdy parów,<br>Prócz girlandy tęcz, obłoków,<br>Prócz natury słodkich czarów;<br><br>Prócz tych wspólnych, jasnych zdrojów,<br>Z których serce zachwyt piło,<br>Prócz pierwiosnków i powojów<br>Między nami nic nie było!",
+    "flagHeader": "Flaga",
+    "flag": "🇵🇱"
+}

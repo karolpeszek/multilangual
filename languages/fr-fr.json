@@ -1,0 +1,10 @@
+{
+    "title": "Application multilingue",
+    "pageTitle": "Bonjour utilisateur !",
+    "header": "Bienvenue sur cette application Web simple. Ici vous pouvez changer la langue :",
+    "availableLanguages": "Langues disponibles:",
+    "poemHeader": "poème court",
+    "poem": "La tombe dit à la rose :<br>– Des pleurs dont l’aube t’arrose<br>Que fais-tu, fleur des amours ?<br>La rose dit à la tombe :<br>– Que fais-tu de ce qui tombe<br>Dans ton gouffre ouvert toujours ?<br>La rose dit : – Tombeau sombre,<br>De ces pleurs je fais dans l’ombre<br>Un parfum d’ambre et de miel.<br>La tombe dit : – Fleur plaintive,<br>De chaque âme qui m’arrive<br>Je fais un ange du ciel !",
+    "flagHeader": "drapeau",
+    "flag": "🇫🇷"
+}

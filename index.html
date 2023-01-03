@@ -1,0 +1,114 @@
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title class="multilangual" id="title"></title>
+        <link rel="icon" href="user.png">
+        <style>
+        #grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 5px;
+}
+
+#grid>div {
+  font-size: 30px;
+  padding: .5em;
+  text-align: center;
+}
+    </style>
+    </head>
+
+    <body onload="loaded()">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
+        <div class="container">
+            <h1 class="text-center mt-3 mb-3 multilangual" id="pageTitle"></h1>
+            <div class="card">
+                <div class="card-header multilangual" id="header"></div>
+                <div class="card-body">
+                    <p class="multilangual" id="availableLanguages"></p>
+                    <br>
+                    <div id="grid">
+                        <div><button class="form-control"
+                                onClick="changeLanguage('pl-pl')"><label>Polski</label></button></div>
+                        <div><button class="form-control"
+                                onClick="changeLanguage('en-uk')"><label>English</label></button></div>
+                        <div><button class="form-control"
+                                onClick="changeLanguage('de-de')"><label>Deutsch</label></button></div>
+                        <div><button class="form-control"
+                                onClick="changeLanguage('ua-ua')"><label>українська</label></button></div>
+                        <div><button class="form-control"
+                                onClick="changeLanguage('fr-fr')"><label>Français</label></button></div>
+                        <div><button class="form-control"
+                                onClick="changeLanguage('es-es')"><label>español</label></button></div>
+                        <div><button class="form-control"
+                                onClick="changeLanguage('sv-sv')"><label>svenska</label></button></div>
+                        <div><button class="form-control"
+                                onClick="changeLanguage('gr-gr')"><label>Ελληνικά</label></button></div>
+                    </div>
+                </div>
+            </div><br>
+            <div class="card">
+                <div class="card-header multilangual" id="flagHeader"></div>
+                <div class="card-body"><h1 class="multilangual" id="flag"></h1></div>
+            </div><br>
+            <div class="card">
+                <div class="card-header multilangual" id="poemHeader"></div>
+                <div class="card-body">
+                    <p class="multilangual" id="poem"></p>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+        <script>
+        let defaultLang = "pl-pl";
+        function getCurrentLanguage() {
+            const searchParams = new URLSearchParams(window.location.search);
+            let lang= searchParams.get('lang');
+            return lang?lang:defaultLang;
+        }
+        function changeLanguage(lang)
+        {
+            location.assign('https://multilangual.karol.gay/?lang='+lang);
+            
+        }
+        let lang = getCurrentLanguage();
+        async function loaded() {
+            try {
+                fetch('/languages/'+lang+'.json')
+                .then((response) => response.json())
+                .then((data) => 
+                {
+                    let elements = document.getElementsByClassName('multilangual');
+                    for(let it=0; it<elements.length; it++)
+                    {
+                        elements[it].innerHTML = data[elements[it].id];
+                    }
+                });
+
+
+
+
+            }catch(ex)
+            {
+                console.log(ex);
+                window.alert('Language loading exception: '+ex);
+            }
+        }
+
+        
+    </script>
+    </body>
+</html>
